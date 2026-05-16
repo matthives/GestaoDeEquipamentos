@@ -26,6 +26,8 @@ while (true)
         break;
     }
 
+    // Operações CRUD - Creat, Read/Retrieve, Update, Delete
+
     if (opcaoMenu == "1")
 
     {
