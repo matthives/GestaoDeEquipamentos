@@ -1,5 +1,10 @@
 ﻿using GestaoDeEquipamentos.ConsoleApp.Dominio;
 
+int contadorIds = 1;
+
+Equipamento[] equipamentosSalvos = new Equipamento[100];
+int contadorEquipamentosSalvos = 0;
+
 while (true)
 {
     Console.Clear();
@@ -36,9 +41,23 @@ while (true)
         DateTime dataFabricacao = DateTime.Parse(Console.ReadLine());
 
         Equipamento equipamento = new Equipamento();
+        equipamento.id = contadorIds++;
         equipamento.nome = nome;
         equipamento.precoAquisicao = precoAquisicao;
         equipamento.dataFabricacao = dataFabricacao;
+
+        for (int i = 0; i < equipamentosSalvos.Length; i++)
+        {
+            if (equipamentosSalvos[i] == null)
+            {
+                equipamentosSalvos[i] = equipamento;
+                break;
+            }
+        }
+
+        Console.WriteLine($"O equipamento {equipamento.nome} foi cadastrado com sucesso!");
+        Console.ReadLine();
+
     }
     else if (opcaoMenu == "2")
     {
