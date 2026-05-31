@@ -4,8 +4,15 @@ public static class GeradorIds
 {
     private static int contadorIdsEquipamentos = 1;
 
-    public static int GerarIdEquipamento()
+    public static int contadorIdsChamados = 1;
+
+    public static int ObterIdEquipamento()
     {
         return contadorIdsEquipamentos++;
+    }
+
+    public static int ObterIdChamado()
+    {
+        return contadorIdsChamados++;
     }
 }

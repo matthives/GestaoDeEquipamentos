@@ -38,8 +38,6 @@ public class TelaChamado
         Console.Write("Digite a descrição do chamado: ");
         string descricao = Console.ReadLine();
 
-        DateTime dataAbertura = DateTime.Now;
-
         // Apresentar os equipamentos cadastrados
         Console.WriteLine("------------------------------------");
 
@@ -87,15 +85,11 @@ public class TelaChamado
             }
         }
 
-        Chamado novoChamado = new Chamado();
-        novoChamado.titulo = titulo;
-        novoChamado.descricao = descricao;
-        novoChamado.dataAbertura = dataAbertura;
-        novoChamado.equipamento = equipamentoSelecionado;
+        Chamado novoChamado = new Chamado(titulo, descricao, equipamentoSelecionado);
 
         repositorioChamado.Cadastrar(novoChamado);
 
-        Console.WriteLine($"O chamado {novoChamado.titulo} foi cadastrado com sucesso!");
+        Console.WriteLine($"O chamado {novoChamado.Titulo} foi cadastrado com sucesso!");
         Console.ReadLine();
     }
 
@@ -122,11 +116,11 @@ public class TelaChamado
 
             Console.WriteLine(
                "{0, -7} | {1, -15} | {2, -30} | {3, 17} | {4, -15}",
-               ch.id,
-               ch.titulo,
-               ch.descricao,
-               ch.dataAbertura.ToShortDateString(),
-               ch.equipamento.Nome
+               ch.Id,
+               ch.Titulo,
+               ch.Descricao,
+               ch.DataAbertura.ToShortDateString(),
+               ch.Equipamento.Nome
             );
         }
 
@@ -187,10 +181,7 @@ public class TelaChamado
             }
         }
 
-        Chamado chamadoAtualizado = new Chamado();
-        chamadoAtualizado.titulo = titulo;
-        chamadoAtualizado.descricao = descricao;
-        chamadoAtualizado.equipamento = equipamentoSelecionado;
+        Chamado chamadoAtualizado = new Chamado(titulo, descricao, equipamentoSelecionado);
 
         repositorioChamado.Editar(idSelecionado, chamadoAtualizado);
 
@@ -221,11 +212,11 @@ public class TelaChamado
 
             Console.WriteLine(
                "{0, -7} | {1, -15} | {2, -30} | {3, -17} | {4, -15}",
-               ch.id,
-               ch.titulo,
-               ch.descricao,
-               ch.dataAbertura.ToShortDateString(),
-               ch.equipamento.Nome
+               ch.Id,
+               ch.Titulo,
+               ch.Descricao,
+               ch.DataAbertura.ToShortDateString(),
+               ch.Equipamento.Nome
             );
         }
 
@@ -262,11 +253,11 @@ public class TelaChamado
 
             Console.WriteLine(
                 "{0, -7} | {1, -15} | {2, -30} | {3, -17} | {4, -15}",
-                ch.id,
-                ch.titulo,
-                ch.descricao,
-                ch.dataAbertura.ToShortDateString(),
-                ch.equipamento.Nome
+                ch.Id,
+                ch.Titulo,
+                ch.Descricao,
+                ch.DataAbertura.ToShortDateString(),
+                ch.Equipamento.Nome
             );
         }
 
