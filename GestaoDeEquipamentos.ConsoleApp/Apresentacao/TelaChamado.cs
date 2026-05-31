@@ -60,7 +60,7 @@ public class TelaChamado
 
             Console.WriteLine(
                "{0, -7} | {1, -15} | {2, -20} | {3, -15}",
-               eq.id, eq.nome, eq.precoAquisicao, eq.dataFabricacao
+               eq.Id, eq.Nome, eq.PrecoAquisicao, eq.DataFabricacao
             );
         }
 
@@ -80,7 +80,7 @@ public class TelaChamado
             if (eq == null)
                 continue;
 
-            if (eq.id == idEquipamentoSelecionado)
+            if (eq.Id == idEquipamentoSelecionado)
             {
                 equipamentoSelecionado = eq;
                 break;
@@ -126,7 +126,7 @@ public class TelaChamado
                ch.titulo,
                ch.descricao,
                ch.dataAbertura.ToShortDateString(),
-               ch.equipamento.nome
+               ch.equipamento.Nome
             );
         }
 
@@ -160,7 +160,7 @@ public class TelaChamado
 
             Console.WriteLine(
                "{0, -7} | {1, -15} | {2, -20} | {3, -15}",
-               eq.id, eq.nome, eq.precoAquisicao, eq.dataFabricacao
+               eq.Id, eq.Nome, eq.PrecoAquisicao, eq.DataFabricacao
             );
         }
 
@@ -180,7 +180,7 @@ public class TelaChamado
             if (eq == null)
                 continue;
 
-            if (eq.id == idEquipamentoSelecionado)
+            if (eq.Id == idEquipamentoSelecionado)
             {
                 equipamentoSelecionado = eq;
                 break;
@@ -225,7 +225,7 @@ public class TelaChamado
                ch.titulo,
                ch.descricao,
                ch.dataAbertura.ToShortDateString(),
-               ch.equipamento.nome
+               ch.equipamento.Nome
             );
         }
 
@@ -266,7 +266,7 @@ public class TelaChamado
                 ch.titulo,
                 ch.descricao,
                 ch.dataAbertura.ToShortDateString(),
-                ch.equipamento.nome
+                ch.equipamento.Nome
             );
         }
 
